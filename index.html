@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Памятники Татарстана - Культурное наследие республики</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div>
+                <h1>Памятники Татарстана</h1>
+                <p>Сохранение культурного наследия нашей республики</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="#add-monument">Добавить памятник</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Культурное наследие Татарстана</h2>
+            <p>Памятники истории и архитектуры, отражающие богатую культуру и героическое прошлое нашей республики</p>
+        </section>
+
+        <section id="map-container">
+            <h2>Карта памятников</h2>
+            <p>Найдите памятники культурного наследия на карте Республики Татарстан</p>
+            <div id="map"></div>
+        </section>
+
+        <section id="add-monument">
+            <h2>Добавить новый памятник</h2>
+            <p>Помогите сохранить историю - добавьте информацию о памятнике</p>
+            <form id="monument-form">
+                <div class="form-group">
+                    <label for="name">Название памятника:</label>
+                    <input type="text" id="name" required placeholder="Например: Мемориал «Вечный огонь»">
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание:</label>
+                    <textarea id="description" required placeholder="Подробное описание памятника, его история и значение"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес:</label>
+                    <input type="text" id="address" required placeholder="Точный адрес расположения">
+                </div>
+                <div class="form-group">
+                    <label for="latitude">Широта:</label>
+                    <input type="text" id="latitude" required placeholder="Например: 55.796391">
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Долгота:</label>
+                    <input type="text" id="longitude" required placeholder="Например: 49.108891">
+                </div>
+                <div class="form-group">
+                    <label for="photo">Фотография:</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+                <button type="submit">Добавить памятник</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Памятники Татарстана. Все права защищены.</p>
+            <p>Проект создан для сохранения культурного наследия Республики Татарстан</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Контакты</a>
+                <a href="#">Партнеры</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
